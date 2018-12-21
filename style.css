@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+.hero {
+    display: grid;
+    /* grid-template: 24px 32px / 100px 1fr; */
+    grid-template-rows: minmax(80px, 150px) 80px;
+    justify-content: center;
+}
+
+.hero .title {
+    font-family: 'Francois One', sans-serif;
+    font-size: 4em;
+
+    background: -webkit-linear-gradient(#DD2476, rgb(165, 42, 17));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .description {
+    font-size: 1.2rem;
+    color: #333;
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero .description .button{
+    max-height: 40px;
+}
+
+.post-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 293px));
+    justify-content: center;
+    grid-gap: 28px;
+}
+
+.post {
+    position: relative;
+    /* width: 200px; */
+    display: block;
+    cursor: pointer;
+}
+
+.post-image {
+    margin: 0;
+}
+
+.post-image img {
+    width: 100%;
+    vertical-align: top;
+}
+
+.post-title {
+    padding: 8px 0;
+    text-align: center;
+}
+
+
+.modal-body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.modal-body p {
+    margin: .5rem 1rem;
+}
+
+.modal-body img {
+    margin-top: .5rem;
+}
+
+.footer {
+    height: 80px;
+    background: #EEEEEE;
+    margin-top: 80px;
+    border-top: 1px solid #E7E7E7;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-text p {
+    font-size: 1rem;
+    color: #333;
+    text-align: center;
+}
+
+.footer-text a {
+    text-decoration: none;
+    color: #8a3ab9;
+}
+
+.footer .footer-text i {
+    color: #cd486b;
+}
+
+@media screen and (max-width: 768px) {
+    .post-list {
+        grid-gap: 3px;
+    }
+
+    .hero .title {
+        font-size: 3rem;
+    }
+
+    .hero .description {
+        font-size: 1rem;
+    }
+
+    .hero .description .buttom {
+        margin-left: .5rem;
+        margin-right: .5rem;
+    }
+
+    .footer {
+        margin-top: 20px;
+    }
+}
